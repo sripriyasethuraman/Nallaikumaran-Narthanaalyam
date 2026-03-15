@@ -8,7 +8,6 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Arima:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* FIX: Standard scrolling with no height restrictions */
     body {
       background-color: #FFD1DC !important;
       margin: 0;
@@ -18,7 +17,6 @@
       width: 100%;
     }
 
-    /* FIX: Changed from sticky to relative to prevent scroll freezing */
     .nav-header {
       background-color: #800000;
       border-bottom: 3px solid #FFD700;
@@ -81,6 +79,16 @@
     }
     .list-item i { color: #800000; flex-shrink: 0; margin-top: 3px; }
 
+    /* Gallery Styling */
+    .gallery-img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
     .whatsapp-btn {
       position: fixed;
       bottom: 25px;
@@ -122,6 +130,7 @@
   <div id="mobile-menu">
     <a href="#home" onclick="toggleMenu()">Home</a>
     <a href="#classes" onclick="toggleMenu()">Classes</a>
+    <a href="#gallery" onclick="toggleMenu()">Gallery</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
   </div>
 
@@ -145,36 +154,27 @@
         <h3 class="text-xl font-black text-[#800000] mb-5 uppercase tracking-wide">Beginners Batch</h3>
         <div class="list-item"><i data-lucide="flower-2" size="18"></i> Correct Araimandi and Muzhumandi postures.</div>
         <div class="list-item"><i data-lucide="flower-2" size="18"></i> Detailed training in basic Tattu and Nattu Adavus.</div>
-        <div class="list-item"><i data-lucide="flower-2" size="18"></i> Learning Asamyuta Hastas (Single hand gestures).</div>
-        <div class="list-item"><i data-lucide="flower-2" size="18"></i> Basic introduction to Thalam (Rhythmic patterns).</div>
-        <div class="list-item"><i data-lucide="flower-2" size="18"></i> Building discipline and physical stamina for dance.</div>
+        <div class="list-item"><i data-lucide="flower-2" size="18"></i> Learning Asamyuta Hastas.</div>
       </div>
 
       <div class="glass-card">
         <h3 class="text-xl font-black text-[#800000] mb-5 uppercase tracking-wide">Advanced Levels</h3>
         <div class="list-item"><i data-lucide="sparkles" size="18"></i> Mastering fast-paced Jathis and complex footwork.</div>
-        <div class="list-item"><i data-lucide="sparkles" size="18"></i> Introduction to Abhinaya (Expression) and Bhavam.</div>
-        <div class="list-item"><i data-lucide="sparkles" size="18"></i> Learning the full Margam (traditional repertoire).</div>
-        <div class="list-item"><i data-lucide="sparkles" size="18"></i> Samyuta Hastas (Double hand gestures) and Viniyogas.</div>
-        <div class="list-item"><i data-lucide="sparkles" size="18"></i> Preparation for Grade examinations and public events.</div>
-      </div>
-
-      <div class="glass-card">
-        <h3 class="text-xl font-black text-[#800000] mb-5 uppercase tracking-wide">Arangetram Coaching</h3>
-        <div class="list-item"><i data-lucide="star" size="18"></i> Exclusive 1-on-1 intensive performance training.</div>
-        <div class="list-item"><i data-lucide="star" size="18"></i> Curating a full 2-hour solo performance repertoire.</div>
-        <div class="list-item"><i data-lucide="star" size="18"></i> Stage presence and makeup/costume guidance.</div>
-        <div class="list-item"><i data-lucide="star" size="18"></i> Practicing with a live professional Carnatic orchestra.</div>
-      </div>
-
-      <div class="glass-card">
-        <h3 class="text-xl font-black text-[#800000] mb-5 uppercase tracking-wide">Adult Heritage</h3>
-        <div class="list-item"><i data-lucide="heart" size="18"></i> Focus on flexibility, poise, and graceful movements.</div>
-        <div class="list-item"><i data-lucide="heart" size="18"></i> Stress relief through rhythmic and artistic movement.</div>
-        <div class="list-item"><i data-lucide="heart" size="18"></i> Cultural appreciation through traditional storytelling.</div>
-        <div class="list-item"><i data-lucide="heart" size="18"></i> Open to all levels, including total beginners.</div>
+        <div class="list-item"><i data-lucide="sparkles" size="18"></i> Introduction to Abhinaya and Bhavam.</div>
+        <div class="list-item"><i data-lucide="sparkles" size="18"></i> Learning the full Margam repertoire.</div>
       </div>
     </div>
+
+    <section id="gallery" class="py-6">
+      <h3 class="text-2xl font-black text-[#800000] mb-6 text-center uppercase tracking-widest" style="font-family: 'Arima';">Gallery</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="images/img1.jpg" alt="Dance Image 1" class="gallery-img">
+        <img src="images/img2.jpg" alt="Logo Image 2" class="gallery-img">
+        
+        <div class="bg-white/50 rounded-2xl aspect-square flex items-center justify-center border-2 border-dashed border-[#800000]/20 text-[#800000]/40 font-bold">Coming Soon</div>
+        <div class="bg-white/50 rounded-2xl aspect-square flex items-center justify-center border-2 border-dashed border-[#800000]/20 text-[#800000]/40 font-bold">Coming Soon</div>
+      </div>
+    </section>
 
     <section id="contact">
       <div class="glass-card text-center border-l-0 border-b-[10px] border-[#800000]">
