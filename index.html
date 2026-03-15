@@ -79,7 +79,6 @@
     }
     .list-item i { color: #800000; flex-shrink: 0; margin-top: 3px; }
 
-    /* --- LIGHTBOX STYLES --- */
     #lightbox {
       display: none;
       position: fixed;
@@ -208,11 +207,9 @@
 
     <section id="gallery" class="my-8">
       <h3 class="text-2xl font-black text-[#800000] mb-6 text-center uppercase tracking-widest" style="font-family: 'Arima';">Gallery</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="images/img1.jpg" class="w-full aspect-square object-cover rounded-xl border-4 border-white shadow-md cursor-pointer hover:opacity-80 transition" onclick="openLightbox(this.src)">
-        <img src="images/img2.jpg" class="w-full aspect-square object-cover rounded-xl border-4 border-white shadow-md cursor-pointer hover:opacity-80 transition" onclick="openLightbox(this.src)">
-        <div class="bg-white/40 aspect-square rounded-xl border-2 border-dashed border-[#800000]/20 flex items-center justify-center text-[#800000]/40 font-bold">Image 3</div>
-        <div class="bg-white/40 aspect-square rounded-xl border-2 border-dashed border-[#800000]/20 flex items-center justify-center text-[#800000]/40 font-bold">Image 4</div>
+      <div class="grid grid-cols-2 gap-4">
+        <img src="images/dance1.jpg" class="w-full aspect-square object-cover rounded-xl border-4 border-white shadow-md cursor-pointer hover:opacity-80 transition" onclick="openLightbox(this.src)">
+        <img src="images/dance2.jpg" class="w-full aspect-square object-cover rounded-xl border-4 border-white shadow-md cursor-pointer hover:opacity-80 transition" onclick="openLightbox(this.src)">
       </div>
     </section>
 
@@ -232,12 +229,10 @@
 
   <script>
     lucide.createIcons();
-    
     function toggleMenu() {
       const menu = document.getElementById('mobile-menu');
       menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
     }
-
     function openLightbox(src) {
       document.getElementById('lightbox-img').src = src;
       document.getElementById('lightbox').style.display = 'flex';
